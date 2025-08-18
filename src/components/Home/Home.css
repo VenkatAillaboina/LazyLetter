@@ -1,0 +1,78 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: calc(var(--spacing-unit) * 3);
+  background: var(--background-header);
+  color: var(--text-light);
+}
+
+.home__title {
+  font-size: clamp(2.5em, 9vw, 4.5em);
+  font-weight: 700;
+  margin-bottom: calc(var(--spacing-unit) * 0.75);
+  letter-spacing: -1.5px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  color: var(--text-light); /* Ensure title color */
+}
+
+.home__subtitle {
+  font-size: clamp(1em, 4vw, 1.4em);
+  margin-bottom: calc(var(--spacing-unit) * 6);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 50ch;
+}
+
+.home__roles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: calc(var(--spacing-unit) * 3);
+  margin-bottom: calc(var(--spacing-unit) * 6);
+}
+
+/* Role Button */
+.home__role-button {
+  padding: calc(var(--spacing-unit) * 1.75) calc(var(--spacing-unit) * 4);
+  font-size: 1.1em;
+  font-weight: 600;
+  border-radius: var(--border-radius-pill);
+  background-color: var(--background-content);
+  color: var(--primary-color);
+  min-width: 150px;
+}
+
+.home__role-button:hover {
+  color: var(--accent-color); /* Hover effect handled by button--secondary hover */
+}
+
+
+/* About Button */
+.home__about-button {
+  margin-top: calc(var(--spacing-unit) * 3);
+  padding: calc(var(--spacing-unit) * 1.25) calc(var(--spacing-unit) * 3);
+  font-size: 1em;
+  border-radius: var(--border-radius-pill);
+}
+
+@media (max-width: 480px) {
+  .home__roles {
+    flex-direction: column;
+    align-items: center;
+    gap: calc(var(--spacing-unit) * 2);
+  }
+
+  .home__role-button {
+    width: 80%;
+    max-width: 280px;
+    padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit) * 3);
+  }
+
+   .home__about-button {
+     padding: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 2.5);
+   }
+}

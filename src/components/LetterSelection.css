@@ -1,0 +1,70 @@
+/* src/components/LetterSelection.css */
+.letter-selection {
+    max-width: 800px;
+    margin: calc(var(--spacing-unit) * 5) auto;
+    padding: calc(var(--spacing-unit) * 4) calc(var(--spacing-unit) * 5);
+    background-color: var(--background-content);
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .letter-selection__title {
+    text-align: center;
+    margin-bottom: calc(var(--spacing-unit) * 5);
+    color: var(--primary-color);
+    font-size: clamp(1.6em, 4vw, 2em);
+    padding-bottom: calc(var(--spacing-unit) * 1.5);
+    border-bottom: 1px solid var(--border-light);
+  }
+  
+  .letter-selection__options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: calc(var(--spacing-unit) * 2.5);
+    margin-bottom: calc(var(--spacing-unit) * 5);
+  }
+  
+  .letter-selection__option-link {
+    display: block;
+    padding: calc(var(--spacing-unit) * 2.5) calc(var(--spacing-unit) * 2);
+    background-color: var(--background-light-accent);
+    color: var(--text-dark);
+    border: 1px solid var(--border-light);
+    border-radius: var(--border-radius-medium);
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+  
+  .letter-selection__option-link:hover {
+    background-color: var(--background-card-hover);
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+    text-decoration: none;
+  }
+  
+  .letter-selection__back-link-container {
+    text-align: center;
+    margin-top: calc(var(--spacing-unit) * 4);
+  }
+  
+  .letter-selection__back-link {
+    /* Uses .button--secondary styles by default */
+    min-width: 150px;
+  }
+  
+  @media (max-width: 480px) {
+    .letter-selection {
+      padding: calc(var(--spacing-unit) * 3);
+    }
+    .letter-selection__options {
+      grid-template-columns: 1fr; /* Stack options on small screens */
+      gap: calc(var(--spacing-unit) * 2);
+    }
+     .letter-selection__option-link {
+       padding: calc(var(--spacing-unit) * 2);
+     }
+  }

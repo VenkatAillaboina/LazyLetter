@@ -1,0 +1,54 @@
+.input-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: calc(var(--spacing-unit) * 2.5);
+  position: relative;
+}
+
+.input-field__label {
+  margin-bottom: calc(var(--spacing-unit) * 0.75);
+  font-weight: 500;
+  color: var(--text-dark);
+  font-size: 0.9em;
+  display: block; /* Ensures label is block level */
+}
+
+.input-field__input {
+  padding: calc(var(--spacing-unit) * 1.25) calc(var(--spacing-unit) * 1.5);
+  border: 1px solid var(--input-border);
+  border-radius: var(--border-radius-medium);
+  font-size: 1em;
+  font-family: inherit;
+  background-color: var(--background-content);
+  color: var(--text-dark);
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  width: 100%; /* Ensure input takes full width of its container */
+}
+
+.input-field__input:focus {
+  outline: none;
+  border-color: var(--input-focus-border);
+  box-shadow: 0 0 0 3px var(--input-focus-shadow);
+}
+
+.input-field__input::placeholder {
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+.input-field__input[type="date"] {
+  appearance: none;
+  min-height: calc(1em * var(--line-height) + calc(var(--spacing-unit) * 1.25) * 2 + 2px); /* Match height of text inputs */
+}
+
+/* For grid layout in forms */
+.input-field[data-field-span="2"] {
+  grid-column: span 2;
+}
+
+/* Responsive adjustments if needed for input fields */
+@media (max-width: 600px) {
+  .input-field[data-field-span="2"] {
+     grid-column: span 1; /* Stack fields in single column on small screens */
+  }
+}

@@ -1,0 +1,52 @@
+.download {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: calc(var(--spacing-unit) * 5) calc(var(--spacing-unit) * 3);
+  min-height: 50vh;
+  text-align: center;
+  background-color: var(--background-content);
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--shadow-medium);
+  max-width: 550px;
+  margin: calc(var(--spacing-unit) * 6) auto;
+}
+
+.download__message {
+  margin-bottom: calc(var(--spacing-unit) * 4);
+  font-size: 1.2em;
+  color: var(--text-dark);
+  line-height: 1.5;
+}
+
+.download__message--error {
+  color: var(--error-color);
+  font-weight: 500;
+}
+
+.download__link {
+ /* Uses .button--primary styles */
+  margin-top: var(--spacing-unit);
+}
+
+/* Simple spinner animation */
+.download__spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border-left-color: var(--secondary-color);
+  margin-bottom: calc(var(--spacing-unit) * 3);
+
+  animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
