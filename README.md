@@ -23,22 +23,15 @@ LazyLetter is a web application designed to simplify the process of generating f
 ## Setup Instructions
 
 1.  **Install Node.js:** Ensure Node.js and npm are installed on your system.
-2.  **Create Project:**
+2.  **Install Dependencies:**
     ```bash
-    npx create-react-app LazyLetter
+    npm install
     ```
-3.  **Navigate to Project:**
-    ```bash
-    cd LazyLetter
-    ```
-4.  **Install Dependencies:**
-    ```bash
-    npm install react-router-dom jspdf
-    ```
-5.  **Start the Application:**
+3.  **Start the Application:**
     ```bash
     npm start
     ```
+
 ## Usage
 
 1.  **Home Page:** Select the user role (Student, Faculty, HOD).
@@ -54,6 +47,7 @@ LazyLetter is a web application designed to simplify the process of generating f
 * **Error Reduction:** Reduces grammatical and structural errors. 
 * **Standardization:** Maintains a uniform format for all letters. 
 * **Easy to Use:** Provides a user-friendly interface. 
+
 ## Team Members
 
 * Addagatla Divija – UI Designer 
