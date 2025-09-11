@@ -1,6 +1,8 @@
 # LazyLetter
 
-LazyLetter is a web application designed to simplify the process of generating formal letters for educational institutions. It provides an easy-to-use platform to create tailored letters quickly and efficiently for students, faculty, non-teaching staff, and heads of departments. 
+LazyLetter is a web application designed to simplify the process of generating formal letters for educational institutions. It provides an easy-to-use platform to create tailored letters quickly and efficiently for students, faculty, non-teaching staff, and heads of departments.  
+
+🔗 **Live Demo:** [LazyLetter on Vercel](https://lazy-letter.vercel.app/)
 
 ## Features
 
